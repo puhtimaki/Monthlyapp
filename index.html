@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monthly €</title>
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <h1>Monthly💲</h1>
+
+        <div class="sub-container">
+          <!-- Budget -->
+          <div class="total-amount-container">
+            <h3>Tulot 💰</h3>
+            <p class="hide error" id="budget-error">
+              Arvo ei voi olla tyhjä
+            </p>
+            <input type="number" id="total-amount" placeholder="Summa" />
+            <button class="submit" id="total-amount-button">
+              Aseta budjetti
+            </button>
+          </div>
+
+          <!-- Expenditure -->
+          <div class="user-amount-container">
+            <h3>Menot 💸</h3>
+            <p class="hide error" id="product-title-error">
+              Arvo ei voi olla tyhjä
+            </p>
+            <select name="kulukategoriat" id="kategoriat">
+              <option value="laina">Laina/Vastike</option>
+              <option value="auto">Auto/Bensa</option>
+              <option value="ruoka">Kauppa</option>
+              <option value="netti">Netti</option>
+              <option value="muut">Muut kulut</option>
+              <option value="suoratoisto">Viihde</option>
+              <option value="saastotili">Säästötili</option>
+            </select>
+            <input
+              type="text"
+              class="product-title"
+              id="product-title"
+              placeholder="Menon nimi"
+            />
+            <input type="number" id="user-amount" placeholder="Summa" />
+            <button class="submit" id="check-amount">Lisää meno</button>
+          </div>
+        </div>
+        <!-- Output -->
+
+        <div class="kulut flex-space">
+          <div>
+            <p>Laina/Vastike 🏠</p>
+            <span id="expenditure-value">0</span>
+          </div>
+          <div>
+            <p>Auto/Bensa 🚗</p>
+            <span id="expenditure-value">0</span>
+          </div>
+          <div>
+            <p>Kauppa 🥩</p>
+            <span id="expenditure-value">0</span>
+          </div>
+
+          <div>
+            <p>Netti 💻</p>
+            <span id="expenditure-value">0</span>
+          </div>
+          <div>
+            <p>Muut 😮</p>
+            <span id="expenditure-value">0</span>
+          </div>
+          <div>
+            <p>Viihde 📺</p>
+            <span id="expenditure-value">0</span>
+          </div>
+        </div>
+        <div class="savings flex-space">
+          <div>
+            <p>Budjetti €</p>
+            <span id="amount">0</span>
+          </div>
+          <div>
+            <p>Kuukausitaso €</p>
+            <span id="balance-amount">0</span>
+          </div>
+          <div>
+            <p>Jäljellä €</p>
+            <span id="balance-amount">0</span>
+          </div>
+          <div>
+            <p>Säästötili €</p>
+            <span id="expenditure-value">0</span>
+          </div>
+        </div>
+      </div>
+      <!-- List -->
+      <div class="list">
+        <h3>Menot listattuna 📝</h3>
+        <div class="list-container" id="list"></div>
+      </div>
+      <div class="footer">
+        <h3>@juho.codes</h3>
+      </div>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
+📝
