@@ -25,6 +25,18 @@ function addBudget() {
   let budgetTotal = document.querySelector('#amount')
   budgetTotal.innerHTML = budget
   document.querySelector('#total-amount').value = ''
+
+  // decrease budget amount
+  let decreaseBudget =
+    parseInt(budget) -
+    parseInt(lainaStatic) -
+    parseInt(autoStatic) -
+    parseInt(kauppaStatic) -
+    parseInt(muutStatic) -
+    parseInt(viihdeStatic) -
+    parseInt(nettiStatic)
+  let decreaseBudgetTotal = document.querySelector('#amount')
+  decreaseBudgetTotal.innerHTML = decreaseBudget
 }
 
 //add expenses button
@@ -38,17 +50,16 @@ expensesInput.addEventListener('keyup', (e) => {
     addExpensesButton.click()
   }
 })
+//increase expenses
 
 //add expenses function
 function addExpenses() {
-  let expenses = document.querySelector('#user-amount').value
-  let expensesTotal = document.querySelector('#laina')
-  expensesTotal.innerHTML = expenses
+  // sum expenses to lainastatic
+
+  let laina = document.querySelector('#laina')
+  let lainaInput = document.querySelector('#user-amount').value
+  let lainaTotal = parseInt(lainaStatic) + parseInt(lainaInput)
+  laina.innerHTML = lainaTotal
+
   document.querySelector('#user-amount').value = ''
-
-  // sum expenses to variables
-  let sum = parseInt(lainaStatic) + parseInt(expenses)
-
-  let sumTotal = document.querySelector('#laina')
-  sumTotal.innerHTML = sum
 }
