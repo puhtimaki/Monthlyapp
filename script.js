@@ -47,7 +47,7 @@ function addExpenses() {
   document.querySelector('#user-amount').value = ''
 
   // sum expenses to variables
-  let sum = parseInt(lainaStatic)
+  let sum = parseInt(lainaStatic) + parseInt(expenses)
 
   let sumTotal = document.querySelector('#laina')
   sumTotal.innerHTML = sum
