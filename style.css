@@ -192,3 +192,13 @@ body {
     gap: 1em;
   }
 }
+
+@media only screen and (max-width: 767px) {
+  /* styles for mobile devices */
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .sub-container {
+    gap: 1em;
+  }
+}

@@ -36,7 +36,7 @@ savingsInput.addEventListener('keyup', (e) => {
 function addBudget() {
   let budget = document.querySelector('#total-amount').value
   let budgetTotal = document.querySelector('#amount')
-  budgetTotal.innerHTML = budget
+  budgetTotal.innerHTML = budget + ' €'
   document.querySelector('#total-amount').value = ''
 
   // decrease budget amount
@@ -55,7 +55,7 @@ function addBudget() {
 function addSavings() {
   let savings = document.querySelector('#total-saastotili').value
   let savingsTotal = document.querySelector('#saastotili-amount')
-  savingsTotal.innerHTML = savings
+  savingsTotal.innerHTML = savings + ' €'
   document.querySelector('#total-saastotili').value = ''
 }
 
@@ -82,37 +82,37 @@ function addExpenses() {
     let laina = document.querySelector('#laina')
     let lainaInput = document.querySelector('#user-amount').value
     let lainaTotal = parseInt(lainaStatic) + parseInt(lainaInput)
-    laina.innerHTML = lainaTotal
+    laina.innerHTML = lainaTotal + ' €'
     document.querySelector('#user-amount').value = ''
   } else if (selectValue === 'auto') {
     let auto = document.querySelector('#auto')
     let autoInput = document.querySelector('#user-amount').value
     let autoTotal = parseInt(autoStatic) + parseInt(autoInput)
-    auto.innerHTML = autoTotal
+    auto.innerHTML = autoTotal + ' €'
     document.querySelector('#user-amount').value = ''
   } else if (selectValue === 'kauppa') {
     let kauppa = document.querySelector('#kauppa')
     let kauppaInput = document.querySelector('#user-amount').value
     let kauppaTotal = parseInt(kauppaStatic) + parseInt(kauppaInput)
-    kauppa.innerHTML = kauppaTotal
+    kauppa.innerHTML = kauppaTotal + ' €'
     document.querySelector('#user-amount').value = ''
   } else if (selectValue === 'muut') {
     let muut = document.querySelector('#muut')
     let muutInput = document.querySelector('#user-amount').value
     let muutTotal = parseInt(muutStatic) + parseInt(muutInput)
-    muut.innerHTML = muutTotal
+    muut.innerHTML = muutTotal + ' €'
     document.querySelector('#user-amount').value = ''
   } else if (selectValue === 'viihde') {
     let viihde = document.querySelector('#viihde')
     let viihdeInput = document.querySelector('#user-amount').value
     let viihdeTotal = parseInt(viihdeStatic) + parseInt(viihdeInput)
-    viihde.innerHTML = viihdeTotal
+    viihde.innerHTML = viihdeTotal + ' €'
     document.querySelector('#user-amount').value = ''
   } else if (selectValue === 'netti') {
     let netti = document.querySelector('#netti')
     let nettiInput = document.querySelector('#user-amount').value
     let nettiTotal = parseInt(nettiStatic) + parseInt(nettiInput)
-    netti.innerHTML = nettiTotal
+    netti.innerHTML = nettiTotal + ' €'
     document.querySelector('#user-amount').value = ''
   } else {
     alert('Täytä kentät!')
