@@ -60,10 +60,13 @@ function addSavings() {
 }
 
 //add expenses button
+let addExpenseName = document.querySelector('#product-title')
+
 let addExpensesButton = document.querySelector('#check-amount')
 addExpensesButton.addEventListener('click', addExpenses)
 //enter input
 let expensesInput = document.querySelector('#user-amount')
+// add eventlistener to input
 expensesInput.addEventListener('keyup', (e) => {
   e.preventDefault()
   if (e.keyCode === 13) {
