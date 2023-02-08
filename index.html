@@ -26,13 +26,17 @@
         <div class="sub-container">
           <!-- Budget -->
           <div class="total-amount-container">
-            <h3>Tulot 💰</h3>
+            <h3>Tulot & Säästöt 💰</h3>
             <p class="hide error" id="budget-error">
               Arvo ei voi olla tyhjä
             </p>
-            <input type="number" id="total-amount" placeholder="Summa" />
+            <input type="number" id="total-amount" placeholder="Budjetti" />
             <button class="submit" id="total-amount-button">
               Aseta budjetti
+            </button>
+            <input type="number" id="total-saastotili" placeholder="Säästö" />
+            <button class="submit" id="total-saastotili-button">
+              Aseta säästöt
             </button>
           </div>
 
@@ -45,10 +49,10 @@
             <select name="kulukategoriat" id="kategoriat">
               <option value="laina">Laina/Vastike</option>
               <option value="auto">Auto/Bensa</option>
-              <option value="ruoka">Kauppa</option>
+              <option value="kauppa">Kauppa</option>
               <option value="netti">Netti</option>
               <option value="muut">Muut kulut</option>
-              <option value="suoratoisto">Viihde</option>
+              <option value="viihde">Viihde</option>
               <option value="saastotili">Säästötili</option>
             </select>
             <input
@@ -113,7 +117,7 @@
           </div>
           <div>
             <p>Säästötili €</p>
-            <span id="expenditure-value">0</span>
+            <span id="saastotili-amount"></span>
           </div>
         </div>
       </div>
