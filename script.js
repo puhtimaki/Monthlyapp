@@ -11,22 +11,43 @@ let saastoTiliStatic = 60
 
 const lainaElem = document.querySelector('#laina')
 lainaElem.innerHTML = lainaStatic + ' €'
+//add edit icon
+const lainaEdit = document.querySelector('#laina-edit')
+lainaEdit.innerHTML = '<i class="fas fa-edit"></i>'
+//add edit icon
 
 const saastoTiliElem = document.querySelector('#saastotili-amount')
 saastoTiliElem.innerHTML = saastoTiliStatic + ' €'
 
 const autoElem = document.querySelector('#auto')
 autoElem.innerHTML = autoStatic + ' €'
+// add edit icon
+const autoEdit = document.querySelector('#auto-edit')
+autoEdit.innerHTML = '<i class="fas fa-edit"></i>'
 
 const kauppaElem = document.querySelector('#kauppa')
 kauppaElem.innerHTML = kauppaStatic + ' €'
+// add edit icon
+const kauppaEdit = document.querySelector('#kauppa-edit')
+kauppaEdit.innerHTML = '<i class="fas fa-edit"></i>'
 
 const muutElem = document.querySelector('#muut')
 muutElem.innerHTML = muutStatic + ' €'
+//add edit icon
+const muutEdit = document.querySelector('#muut-edit')
+muutEdit.innerHTML = '<i class="fas fa-edit"></i>'
+
 const viihdeElem = document.querySelector('#viihde')
 viihdeElem.innerHTML = viihdeStatic + ' €'
+//add edit icon
+const viihdeEdit = document.querySelector('#viihde-edit')
+viihdeEdit.innerHTML = '<i class="fas fa-edit"></i>'
+
 const nettiElem = document.querySelector('#netti')
 nettiElem.innerHTML = nettiStatic + ' €'
+//add edit icon
+const nettiEdit = document.querySelector('#netti-edit')
+nettiEdit.innerHTML = '<i class="fas fa-edit"></i>'
 
 //onclick event button
 let AddbbudgetButton = document.querySelector('#total-amount-button')
