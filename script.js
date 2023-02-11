@@ -1,12 +1,28 @@
 'use strict'
 
-//statuc expenses
-let lainaStatic = (document.querySelector('#laina').innerHTML = 263)
-let autoStatic = (document.querySelector('#auto').innerHTML = 500)
-let kauppaStatic = (document.querySelector('#kauppa').innerHTML = 350)
-let muutStatic = (document.querySelector('#muut').innerHTML = 40)
-let viihdeStatic = (document.querySelector('#viihde').innerHTML = 15)
-let nettiStatic = (document.querySelector('#netti').innerHTML = 27)
+//static expenses
+let lainaStatic = 263
+let autoStatic = 500
+let kauppaStatic = 250
+let muutStatic = 0
+let viihdeStatic = 20
+let nettiStatic = 27
+
+const lainaElem = document.querySelector('#laina')
+lainaElem.innerHTML = lainaStatic + ' €'
+
+const autoElem = document.querySelector('#auto')
+autoElem.innerHTML = autoStatic + ' €'
+
+const kauppaElem = document.querySelector('#kauppa')
+kauppaElem.innerHTML = kauppaStatic + ' €'
+
+const muutElem = document.querySelector('#muut')
+muutElem.innerHTML = muutStatic + ' €'
+const viihdeElem = document.querySelector('#viihde')
+viihdeElem.innerHTML = viihdeStatic + ' €'
+const nettiElem = document.querySelector('#netti')
+nettiElem.innerHTML = nettiStatic + ' €'
 
 //onclick event button
 let AddbbudgetButton = document.querySelector('#total-amount-button')
@@ -39,17 +55,29 @@ function addBudget() {
   budgetTotal.innerHTML = budget + ' €'
   document.querySelector('#total-amount').value = ''
 
-  // decrease budget amount
-  let decreaseBudget =
-    parseInt(budget) -
-    parseInt(lainaStatic) -
-    parseInt(autoStatic) -
-    parseInt(kauppaStatic) -
-    parseInt(muutStatic) -
-    parseInt(viihdeStatic) -
-    parseInt(nettiStatic)
-  let decreaseBudgetTotal = document.querySelector('#amount')
-  decreaseBudgetTotal.innerHTML = decreaseBudget
+  // minus static expenses from budget
+  let budgetTotalInt = parseInt(budget)
+  let lainaStaticInt = parseInt(lainaStatic)
+  let autoStaticInt = parseInt(autoStatic)
+  let kauppaStaticInt = parseInt(kauppaStatic)
+  let muutStaticInt = parseInt(muutStatic)
+  let viihdeStaticInt = parseInt(viihdeStatic)
+  let nettiStaticInt = parseInt(nettiStatic)
+  let totalStatic =
+    lainaStaticInt +
+    autoStaticInt +
+    kauppaStaticInt +
+    muutStaticInt +
+    viihdeStaticInt +
+    nettiStaticInt
+  let budgetLeft = budgetTotalInt - totalStatic
+  let budgetLeftElem = document.querySelector('#amount')
+  budgetLeftElem.innerHTML = budgetLeft + ' €'
+
+  //divide budget to 4 weeks
+  let budgetPerWeek = budgetLeft / 4
+  let budgetPerWeekElem = document.querySelector('#balance-amount')
+  budgetPerWeekElem.innerHTML = budgetPerWeek + ' €'
 }
 
 function addSavings() {
@@ -57,6 +85,19 @@ function addSavings() {
   let savingsTotal = document.querySelector('#saastotili-amount')
   savingsTotal.innerHTML = savings + ' €'
   document.querySelector('#total-saastotili').value = ''
+
+  //minus savings from budget
+  let budgetLeftElem = document.querySelector('#amount')
+  let budgetLeft = budgetLeftElem.innerHTML
+  let budgetLeftInt = parseInt(budgetLeft)
+  let savingsInt = parseInt(savings)
+  let budgetLeftMinusSavings = budgetLeftInt - savingsInt
+  budgetLeftElem.innerHTML = budgetLeftMinusSavings + ' €'
+
+  //update budget per week
+  let budgetPerWeek = budgetLeftMinusSavings / 4
+  let budgetPerWeekElem = document.querySelector('#balance-amount')
+  budgetPerWeekElem.innerHTML = budgetPerWeek + ' €'
 }
 
 //add expenses button
