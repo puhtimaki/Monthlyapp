@@ -94,7 +94,15 @@ body {
   text-align: center;
   color: black;
 }
+li {
+  color: red;
+  font-size: 16px;
+}
 
+.fa-trash-alt {
+  color: black;
+  cursor: pointer;
+}
 .savings {
   background-color: white;
   color: #ffffff;
