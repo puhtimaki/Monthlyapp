@@ -176,12 +176,12 @@ function addExpenses() {
       let budgetLeftInt = parseInt(budgetLeft)
       let budgetLeftMinusLaina = budgetLeftInt + expensesInt
       budgetLeftElem.innerHTML = budgetLeftMinusLaina + ' € '
-      //update laina
+      //update laina to static
+      let lainaStaticInt = parseInt(lainaStatic)
+      let lainaStaticNew = lainaStaticInt - expensesInt
+      lainaStatic = lainaStaticNew
       let lainaElem = document.querySelector('#laina')
-      let laina = lainaElem.innerHTML
-      let lainaInt = parseInt(laina)
-      let lainaMinus = lainaInt - expensesInt
-      lainaElem.innerHTML = lainaMinus + ' €'
+      lainaElem.innerHTML = lainaStatic + ' €'
     })
   } else if (selectValue === 'Auto/Bensa') {
     // get value from input and add to static expenses and update html element with new value and clear input field and minus the amount from budget
