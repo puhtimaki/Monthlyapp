@@ -179,6 +179,11 @@ function addExpenses() {
     })
   } else if (selectValue === 'Auto/Bensa') {
     // get value from input and add to static expenses and update html element with new value and clear input field and minus the amount from budget
+    let expenseName = document.querySelector('#product-title').value
+    let expenseNameElem = document.querySelector('#product-title')
+    expenseNameElem.innerHTML = expenseName
+    document.querySelector('#product-title').value = ''
+
     let expenses = document.querySelector('#user-amount').value
     let expensesInt = parseInt(expenses)
     let autoStaticInt = parseInt(autoStatic)
@@ -193,8 +198,38 @@ function addExpenses() {
     let budgetLeftInt = parseInt(budgetLeft)
     let budgetLeftMinusAuto = budgetLeftInt - expensesInt
     budgetLeftElem.innerHTML = budgetLeftMinusAuto + ' €'
+
+    // add to html listing
+    let list = document.querySelector('#list')
+    let li = document.createElement('li')
+    li.innerHTML = ' 🚗:  ' + expenseName + ': ' + expenses + '€ '
+    list.appendChild(li)
+    // add trash icon
+    let trash = document.createElement('i')
+    trash.classList.add('fas', 'fa-trash-alt')
+    li.appendChild(trash)
+    // add eventlistener to trash icon
+    trash.addEventListener('click', () => {
+      li.remove()
+      //update budget
+      let budgetLeftElem = document.querySelector('#amount')
+      let budgetLeft = budgetLeftElem.innerHTML
+      let budgetLeftInt = parseInt(budgetLeft)
+      let budgetLeftMinusAuto = budgetLeftInt + expensesInt
+      budgetLeftElem.innerHTML = budgetLeftMinusAuto + ' € '
+      //update laina to static
+      let autoStaticInt = parseInt(autoStatic)
+      let autoStaticNew = autoStaticInt - expensesInt
+      autoStatic = autoStaticNew
+      let autoElem = document.querySelector('#auto')
+      autoElem.innerHTML = autoStatic + ' €'
+    })
   } else if (selectValue === 'Kauppa') {
     // get value from input and add to static expenses and update html element with new value and clear input field and minus the amount from budget
+    let expenseName = document.querySelector('#product-title').value
+    let expenseNameElem = document.querySelector('#product-title')
+    expenseNameElem.innerHTML = expenseName
+    document.querySelector('#product-title').value = ''
     let expenses = document.querySelector('#user-amount').value
     let expensesInt = parseInt(expenses)
     let kauppaStaticInt = parseInt(kauppaStatic)
@@ -209,8 +244,38 @@ function addExpenses() {
     let budgetLeftInt = parseInt(budgetLeft)
     let budgetLeftMinusKauppa = budgetLeftInt - expensesInt
     budgetLeftElem.innerHTML = budgetLeftMinusKauppa + ' €'
+
+    // add to html listing
+    let list = document.querySelector('#list')
+    let li = document.createElement('li')
+    li.innerHTML = ' 🥩:  ' + expenseName + ': ' + expenses + '€ '
+    list.appendChild(li)
+    // add trash icon
+    let trash = document.createElement('i')
+    trash.classList.add('fas', 'fa-trash-alt')
+    li.appendChild(trash)
+    // add eventlistener to trash icon
+    trash.addEventListener('click', () => {
+      li.remove()
+      //update budget
+      let budgetLeftElem = document.querySelector('#amount')
+      let budgetLeft = budgetLeftElem.innerHTML
+      let budgetLeftInt = parseInt(budgetLeft)
+      let budgetLeftMinusKauppa = budgetLeftInt + expensesInt
+      budgetLeftElem.innerHTML = budgetLeftMinusKauppa + ' € '
+      //update laina to static
+      let kauppaStaticInt = parseInt(kauppaStatic)
+      let kauppaStaticNew = kauppaStaticInt - expensesInt
+      kauppaStatic = kauppaStaticNew
+      let kauppaElem = document.querySelector('#kauppa')
+      kauppaElem.innerHTML = kauppaStatic + ' €'
+    })
   } else if (selectValue === 'Muu') {
     // get value from input and add to static expenses and update html element with new value and clear input field and minus the amount from budget
+    let expenseName = document.querySelector('#product-title').value
+    let expenseNameElem = document.querySelector('#product-title')
+    expenseNameElem.innerHTML = expenseName
+    document.querySelector('#product-title').value = ''
     let expenses = document.querySelector('#user-amount').value
     let expensesInt = parseInt(expenses)
     let muutStaticInt = parseInt(muutStatic)
@@ -227,6 +292,10 @@ function addExpenses() {
     budgetLeftElem.innerHTML = budgetLeftMinusMuut + ' €'
   } else if (selectValue === 'Netti') {
     // get value from input and add to static expenses and update html element with new value and clear input field and minus the amount from budget
+    let expenseName = document.querySelector('#product-title').value
+    let expenseNameElem = document.querySelector('#product-title')
+    expenseNameElem.innerHTML = expenseName
+    document.querySelector('#product-title').value = ''
     let expenses = document.querySelector('#user-amount').value
     let expensesInt = parseInt(expenses)
     let nettiStaticInt = parseInt(nettiStatic)
@@ -243,6 +312,10 @@ function addExpenses() {
     budgetLeftElem.innerHTML = budgetLeftMinusNetti + ' €'
   } else if (selectValue === 'Viihde') {
     // get value from input and add to static expenses and update html element with new value and clear input field and minus the amount from budget
+    let expenseName = document.querySelector('#product-title').value
+    let expenseNameElem = document.querySelector('#product-title')
+    expenseNameElem.innerHTML = expenseName
+    document.querySelector('#product-title').value = ''
     let expenses = document.querySelector('#user-amount').value
     let expensesInt = parseInt(expenses)
     let viihdeStaticInt = parseInt(viihdeStatic)
