@@ -290,6 +290,32 @@ function addExpenses() {
     let budgetLeftInt = parseInt(budgetLeft)
     let budgetLeftMinusMuut = budgetLeftInt - expensesInt
     budgetLeftElem.innerHTML = budgetLeftMinusMuut + ' €'
+
+    // add to html listing
+    let list = document.querySelector('#list')
+    let li = document.createElement('li')
+    li.innerHTML = ' 😮:  ' + expenseName + ': ' + expenses + '€ '
+    list.appendChild(li)
+    // add trash icon
+    let trash = document.createElement('i')
+    trash.classList.add('fas', 'fa-trash-alt')
+    li.appendChild(trash)
+    // add eventlistener to trash icon
+    trash.addEventListener('click', () => {
+      li.remove()
+      //update budget
+      let budgetLeftElem = document.querySelector('#amount')
+      let budgetLeft = budgetLeftElem.innerHTML
+      let budgetLeftInt = parseInt(budgetLeft)
+      let budgetLeftMinusMuut = budgetLeftInt + expensesInt
+      budgetLeftElem.innerHTML = budgetLeftMinusMuut + ' € '
+      //update laina to static
+      let muutStaticInt = parseInt(muutStatic)
+      let muutStaticNew = muutStaticInt - expensesInt
+      muutStatic = muutStaticNew
+      let muutElem = document.querySelector('#muut')
+      muutElem.innerHTML = muutStatic + ' €'
+    })
   } else if (selectValue === 'Netti') {
     // get value from input and add to static expenses and update html element with new value and clear input field and minus the amount from budget
     let expenseName = document.querySelector('#product-title').value
@@ -310,6 +336,32 @@ function addExpenses() {
     let budgetLeftInt = parseInt(budgetLeft)
     let budgetLeftMinusNetti = budgetLeftInt - expensesInt
     budgetLeftElem.innerHTML = budgetLeftMinusNetti + ' €'
+
+    // add to html listing
+    let list = document.querySelector('#list')
+    let li = document.createElement('li')
+    li.innerHTML = ' 💻:  ' + expenseName + ': ' + expenses + '€ '
+    list.appendChild(li)
+    // add trash icon
+    let trash = document.createElement('i')
+    trash.classList.add('fas', 'fa-trash-alt')
+    li.appendChild(trash)
+    // add eventlistener to trash icon
+    trash.addEventListener('click', () => {
+      li.remove()
+      //update budget
+      let budgetLeftElem = document.querySelector('#amount')
+      let budgetLeft = budgetLeftElem.innerHTML
+      let budgetLeftInt = parseInt(budgetLeft)
+      let budgetLeftMinusNetti = budgetLeftInt + expensesInt
+      budgetLeftElem.innerHTML = budgetLeftMinusNetti + ' € '
+      //update laina to static
+      let nettiStaticInt = parseInt(nettiStatic)
+      let nettiStaticNew = nettiStaticInt - expensesInt
+      nettiStatic = nettiStaticNew
+      let nettiElem = document.querySelector('#netti')
+      nettiElem.innerHTML = nettiStatic + ' €'
+    })
   } else if (selectValue === 'Viihde') {
     // get value from input and add to static expenses and update html element with new value and clear input field and minus the amount from budget
     let expenseName = document.querySelector('#product-title').value
@@ -330,6 +382,32 @@ function addExpenses() {
     let budgetLeftInt = parseInt(budgetLeft)
     let budgetLeftMinusViihde = budgetLeftInt - expensesInt
     budgetLeftElem.innerHTML = budgetLeftMinusViihde + ' €'
+
+    // add to html listing
+    let list = document.querySelector('#list')
+    let li = document.createElement('li')
+    li.innerHTML = ' 📺:  ' + expenseName + ': ' + expenses + '€ '
+    list.appendChild(li)
+    // add trash icon
+    let trash = document.createElement('i')
+    trash.classList.add('fas', 'fa-trash-alt')
+    li.appendChild(trash)
+    // add eventlistener to trash icon
+    trash.addEventListener('click', () => {
+      li.remove()
+      //update budget
+      let budgetLeftElem = document.querySelector('#amount')
+      let budgetLeft = budgetLeftElem.innerHTML
+      let budgetLeftInt = parseInt(budgetLeft)
+      let budgetLeftMinusViihde = budgetLeftInt + expensesInt
+      budgetLeftElem.innerHTML = budgetLeftMinusViihde + ' € '
+      //update laina to static
+      let viihdeStaticInt = parseInt(viihdeStatic)
+      let viihdeStaticNew = viihdeStaticInt - expensesInt
+      viihdeStatic = viihdeStaticNew
+      let viihdeElem = document.querySelector('#viihde')
+      viihdeElem.innerHTML = viihdeStatic + ' €'
+    })
   } else {
     alert('Täytä kentät!')
   }
