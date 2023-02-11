@@ -155,13 +155,7 @@ function addExpenses() {
     // add to html listing
     let list = document.querySelector('#list')
     let li = document.createElement('li')
-    li.innerHTML =
-      select.options[select.selectedIndex].value +
-      ' - ' +
-      expenseName +
-      ': ' +
-      expenses +
-      '€ '
+    li.innerHTML = ' 🏠:  ' + expenseName + ': ' + expenses + '€ '
     list.appendChild(li)
     // add trash icon
     let trash = document.createElement('i')
