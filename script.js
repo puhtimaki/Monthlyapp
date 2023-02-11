@@ -77,6 +77,11 @@ function addBudget() {
   let budgetLeft = budgetTotalInt - totalStatic
   let budgetLeftElem = document.querySelector('#amount')
   budgetLeftElem.innerHTML = budgetLeft + ' €'
+
+  //split to 4 weeks
+  let splitToFourWeeks = budgetLeft / 4
+  let splitToFourWeeksElem = document.querySelector('#balance-amount')
+  splitToFourWeeksElem.innerHTML = splitToFourWeeks + ' €'
 }
 
 function addSavings() {
@@ -95,6 +100,11 @@ function addSavings() {
   let budgetLeftInt = parseInt(budgetLeft)
   let budgetLeftMinusSavings = budgetLeftInt - savingsInt
   budgetLeftElem.innerHTML = budgetLeftMinusSavings + ' €'
+
+  //split to 4 weeks
+  let splitToFourWeeks = budgetLeftMinusSavings / 4
+  let splitToFourWeeksElem = document.querySelector('#balance-amount')
+  splitToFourWeeksElem.innerHTML = splitToFourWeeks + ' €'
 }
 
 //add expenses button
@@ -111,7 +121,6 @@ expensesInput.addEventListener('keyup', (e) => {
     addExpensesButton.click()
   }
 })
-//increase expenses
 
 //add expenses function
 function addExpenses() {
@@ -218,4 +227,15 @@ function addExpenses() {
   } else {
     alert('Täytä kentät!')
   }
+  function divideBudget() {
+    // divide budgetLeft to 4 weeks
+    let budgetLeftElem = document.querySelector('#amount')
+    let budgetLeft = budgetLeftElem.innerHTML
+    let budgetLeftInt = parseInt(budgetLeft)
+    let budgetLeftDivided = budgetLeftInt / 4
+    let budgetLeftDividedRounded = Math.round(budgetLeftDivided)
+    let budgetLeftDividedRoundedElem = document.querySelector('#balance-amount')
+    budgetLeftDividedRoundedElem.innerHTML = budgetLeftDividedRounded + ' €'
+  }
+  divideBudget()
 }
