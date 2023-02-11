@@ -80,6 +80,10 @@ body {
   padding: 1.2em;
 }
 
+#saastotili-amount {
+  color: green;
+}
+
 .kulut {
   background-color: white;
   color: #ffffff;
@@ -88,7 +92,7 @@ body {
   margin: 2em 0;
   padding: 1.2em;
   text-align: center;
-  color: red;
+  color: black;
 }
 
 .savings {
@@ -99,7 +103,7 @@ body {
   margin: 2em 0;
   padding: 1.2em;
   text-align: center;
-  color: green;
+  color: black;
 }
 .output-container p {
   font-weight: 500;
@@ -117,6 +121,8 @@ body {
   border: none;
   border-radius: 10px;
   padding: 8px;
+  float: right;
+  margin-bottom: 5px;
   min-height: 5px;
   min-width: 80px;
   cursor: pointer;
