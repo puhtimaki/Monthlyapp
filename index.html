@@ -33,11 +33,21 @@
             <p class="hide error" id="budget-error">
               Arvo ei voi olla tyhjä
             </p>
-            <input type="number" id="total-amount" placeholder="Budjetti" />
+            <input
+              type="number"
+              pattern="[0-9]*"
+              id="total-amount"
+              placeholder="Budjetti"
+            />
             <button class="submit" id="total-amount-button">
               Aseta budjetti
             </button>
-            <input type="number" id="total-saastotili" placeholder="Säästö" />
+            <input
+              type="number"
+              pattern="[0-9]*"
+              id="total-saastotili"
+              placeholder="Säästö"
+            />
             <button class="submit" id="total-saastotili-button">
               Aseta säästöt
             </button>
