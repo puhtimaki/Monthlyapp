@@ -150,6 +150,15 @@
 
       <div class="footer">
         <h3>@juho.codes</h3>
+        <button class="submit" id="clearmonth" onclick="clearMonth()">
+          Tyhjennä
+        </button>
+        <script type="text/javascript">
+          function clearMonth() {
+            localStorage.clear()
+            location.reload()
+          }
+        </script>
       </div>
     </div>
     <!-- Script -->
