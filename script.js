@@ -11,10 +11,26 @@ let saastoTiliStatic = 60
 
 const lainaElem = document.querySelector('#laina')
 lainaElem.innerHTML = lainaStatic + ' €'
-//add edit icon
+
 const lainaEdit = document.querySelector('#laina-edit')
 lainaEdit.innerHTML = '<i class="fas fa-edit"></i>'
-//add edit icon
+
+/* //edit functionality
+lainaEdit.addEventListener('click', () => {
+  let lainaEditInput = document.querySelector('#laina-edit-input')
+  lainaEditInput.innerHTML =
+    '<input type="number" id="laina-edit-input-value" value="' +
+    lainaStatic +
+    '"><button id="laina-edit-input-button">OK</button>'
+  let lainaEditInputButton = document.querySelector('#laina-edit-input-button')
+  lainaEditInputButton.addEventListener('click', () => {
+    let lainaEditInputValue = document.querySelector('#laina-edit-input-value')
+      .value
+    lainaStatic = lainaEditInputValue
+    lainaElem.innerHTML = lainaStatic + ' €'
+    lainaEditInput.innerHTML = ''
+  })
+}) */
 
 const saastoTiliElem = document.querySelector('#saastotili-amount')
 saastoTiliElem.innerHTML = saastoTiliStatic + ' €'
