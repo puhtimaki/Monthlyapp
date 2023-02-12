@@ -15,13 +15,13 @@ lainaElem.innerHTML = lainaStatic + ' €'
 const lainaEdit = document.querySelector('#laina-edit')
 lainaEdit.innerHTML = '<i class="fas fa-edit"></i>'
 
-/* //edit functionality
+// edit functionality with button and enter
 lainaEdit.addEventListener('click', () => {
   let lainaEditInput = document.querySelector('#laina-edit-input')
   lainaEditInput.innerHTML =
     '<input type="number" id="laina-edit-input-value" value="' +
     lainaStatic +
-    '"><button id="laina-edit-input-button">OK</button>'
+    '"><button id="laina-edit-input-button">Lisää</button>'
   let lainaEditInputButton = document.querySelector('#laina-edit-input-button')
   lainaEditInputButton.addEventListener('click', () => {
     let lainaEditInputValue = document.querySelector('#laina-edit-input-value')
@@ -30,7 +30,13 @@ lainaEdit.addEventListener('click', () => {
     lainaElem.innerHTML = lainaStatic + ' €'
     lainaEditInput.innerHTML = ''
   })
-}) */
+  lainaEditInput.addEventListener('keyup', (e) => {
+    e.preventDefault()
+    if (e.keyCode === 13) {
+      lainaEditInputButton.click()
+    }
+  })
+})
 
 const saastoTiliElem = document.querySelector('#saastotili-amount')
 saastoTiliElem.innerHTML = saastoTiliStatic + ' €'

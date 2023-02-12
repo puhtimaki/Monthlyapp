@@ -100,6 +100,16 @@ li {
   list-style-type: none;
 }
 
+#laina-edit-input-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  min-height: 30px;
+  min-width: 60px;
+  cursor: pointer;
+}
+
 .fa-trash-alt {
   color: red;
   cursor: pointer;
