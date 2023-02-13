@@ -184,7 +184,9 @@ nettiEdit.addEventListener('click', () => {
 })
 
 //onclick event button
+
 let AddbbudgetButton = document.querySelector('#total-amount-button')
+let budget = localStorage.getItem('budget')
 AddbbudgetButton.addEventListener('click', addBudget)
 // eenter input
 let budgetInput = document.querySelector('#total-amount')
@@ -198,6 +200,7 @@ budgetInput.addEventListener('keyup', (e) => {
 //onclick event button
 let AddSavingsButton = document.querySelector('#total-saastotili-button')
 AddSavingsButton.addEventListener('click', addSavings)
+
 // eenter input
 let savingsInput = document.querySelector('#total-saastotili')
 savingsInput.addEventListener('keyup', (e) => {
