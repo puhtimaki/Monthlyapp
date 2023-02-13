@@ -19,9 +19,7 @@ lainaEdit.innerHTML = '<i class="fas fa-edit"></i>'
 lainaEdit.addEventListener('click', () => {
   let lainaEditInput = document.querySelector('#laina-edit-input')
   lainaEditInput.innerHTML =
-    '<input type="number" id="laina-edit-input-value" value="' +
-    lainaStatic +
-    '"><button id="laina-edit-input-button">Lisää</button>'
+    '<input type="number" id="laina-edit-input-value" value=""><button id="laina-edit-input-button">Lisää</button>'
   let lainaEditInputButton = document.querySelector('#laina-edit-input-button')
   lainaEditInputButton.addEventListener('click', () => {
     let lainaEditInputValue = document.querySelector('#laina-edit-input-value')
@@ -30,11 +28,13 @@ lainaEdit.addEventListener('click', () => {
     lainaElem.innerHTML = lainaStatic + ' €'
     lainaEditInput.innerHTML = ''
   })
+
   lainaEditInput.addEventListener('keyup', (e) => {
     e.preventDefault()
     if (e.keyCode === 13) {
       lainaEditInputButton.click()
     }
+    //update budget amount from edited value
   })
 })
 
@@ -43,33 +43,145 @@ saastoTiliElem.innerHTML = saastoTiliStatic + ' €'
 
 const autoElem = document.querySelector('#auto')
 autoElem.innerHTML = autoStatic + ' €'
+
 // add edit icon
 const autoEdit = document.querySelector('#auto-edit')
 autoEdit.innerHTML = '<i class="fas fa-edit"></i>'
+// edit functionality with button and enter
+autoEdit.addEventListener('click', () => {
+  let autoEditInput = document.querySelector('#auto-edit-input')
+  autoEditInput.innerHTML =
+    '<input type="number" id="auto-edit-input-value" value=""><button id="auto-edit-input-button">Lisää</button>'
+  let autoEditInputButton = document.querySelector('#auto-edit-input-button')
+  autoEditInputButton.addEventListener('click', () => {
+    let autoEditInputValue = document.querySelector('#auto-edit-input-value')
+      .value
+    autoStatic = autoEditInputValue
+    autoElem.innerHTML = autoStatic + ' €'
+    autoEditInput.innerHTML = ''
+  })
+  // add enter
+  autoEditInput.addEventListener('keyup', (e) => {
+    e.preventDefault()
+    if (e.keyCode === 13) {
+      autoEditInputButton.click()
+    }
+  })
+})
 
 const kauppaElem = document.querySelector('#kauppa')
 kauppaElem.innerHTML = kauppaStatic + ' €'
 // add edit icon
 const kauppaEdit = document.querySelector('#kauppa-edit')
 kauppaEdit.innerHTML = '<i class="fas fa-edit"></i>'
+// edit functionality with button and enter
+kauppaEdit.addEventListener('click', () => {
+  let kauppaEditInput = document.querySelector('#kauppa-edit-input')
+  kauppaEditInput.innerHTML =
+    '<input type="number" id="kauppa-edit-input-value" value=""><button id="kauppa-edit-input-button">Lisää</button>'
+  let kauppaEditInputButton = document.querySelector(
+    '#kauppa-edit-input-button',
+  )
+  kauppaEditInputButton.addEventListener('click', () => {
+    let kauppaEditInputValue = document.querySelector(
+      '#kauppa-edit-input-value',
+    ).value
+    kauppaStatic = kauppaEditInputValue
+    kauppaElem.innerHTML = kauppaStatic + ' €'
+    kauppaEditInput.innerHTML = ''
+  })
+  // add enter
+  kauppaEditInput.addEventListener('keyup', (e) => {
+    e.preventDefault()
+    if (e.keyCode === 13) {
+      kauppaEditInputButton.click()
+    }
+  })
+})
 
 const muutElem = document.querySelector('#muut')
 muutElem.innerHTML = muutStatic + ' €'
 //add edit icon
 const muutEdit = document.querySelector('#muut-edit')
 muutEdit.innerHTML = '<i class="fas fa-edit"></i>'
+// edit functionality with button and enter
+muutEdit.addEventListener('click', () => {
+  let muutEditInput = document.querySelector('#muut-edit-input')
+  muutEditInput.innerHTML =
+    '<input type="number" id="muut-edit-input-value" value=""><button id="muut-edit-input-button">Lisää</button>'
+  let muutEditInputButton = document.querySelector('#muut-edit-input-button')
+  muutEditInputButton.addEventListener('click', () => {
+    let muutEditInputValue = document.querySelector('#muut-edit-input-value')
+      .value
+    muutStatic = muutEditInputValue
+    muutElem.innerHTML = muutStatic + ' €'
+    muutEditInput.innerHTML = ''
+  })
+  // add enter
+  muutEditInput.addEventListener('keyup', (e) => {
+    e.preventDefault()
+    if (e.keyCode === 13) {
+      muutEditInputButton.click()
+    }
+  })
+})
 
 const viihdeElem = document.querySelector('#viihde')
 viihdeElem.innerHTML = viihdeStatic + ' €'
 //add edit icon
 const viihdeEdit = document.querySelector('#viihde-edit')
 viihdeEdit.innerHTML = '<i class="fas fa-edit"></i>'
+// edit functionality with button and enter
+viihdeEdit.addEventListener('click', () => {
+  let viihdeEditInput = document.querySelector('#viihde-edit-input')
+  viihdeEditInput.innerHTML =
+    '<input type="number" id="viihde-edit-input-value" value=""><button id="viihde-edit-input-button">Lisää</button>'
+  let viihdeEditInputButton = document.querySelector(
+    '#viihde-edit-input-button',
+  )
+  viihdeEditInputButton.addEventListener('click', () => {
+    let viihdeEditInputValue = document.querySelector(
+      '#viihde-edit-input-value',
+    ).value
+    viihdeStatic = viihdeEditInputValue
+    viihdeElem.innerHTML = viihdeStatic + ' €'
+    viihdeEditInput.innerHTML = ''
+  })
+  // add enter
+  viihdeEditInput.addEventListener('keyup', (e) => {
+    e.preventDefault()
+    if (e.keyCode === 13) {
+      viihdeEditInputButton.click()
+    }
+  })
+})
 
 const nettiElem = document.querySelector('#netti')
 nettiElem.innerHTML = nettiStatic + ' €'
 //add edit icon
 const nettiEdit = document.querySelector('#netti-edit')
 nettiEdit.innerHTML = '<i class="fas fa-edit"></i>'
+// edit functionality with button and enter
+nettiEdit.addEventListener('click', () => {
+  let nettiEditInput = document.querySelector('#netti-edit-input')
+  nettiEditInput.innerHTML =
+    '<input type="number" id="netti-edit-input-value" value=""><button id="netti-edit-input-button">Lisää</button>'
+  let nettiEditInputButton = document.querySelector('#netti-edit-input-button')
+  nettiEditInputButton.addEventListener('click', () => {
+    let nettiEditInputValue = document.querySelector('#netti-edit-input-value')
+      .value
+    nettiStatic = nettiEditInputValue
+    nettiElem.innerHTML = nettiStatic + ' €'
+    nettiEditInput.innerHTML = ''
+  })
+  // add enter
+  nettiEditInput.addEventListener('keyup', (e) => {
+    e.preventDefault()
+    if (e.keyCode === 13) {
+      nettiEditInputButton.click()
+    }
+  })
+})
 
 //onclick event button
 let AddbbudgetButton = document.querySelector('#total-amount-button')

@@ -89,6 +89,7 @@
         </div>
         <!-- Output -->
         <h3>Kiinteät kulut:</h3>
+        <h6>(Muuta kuluja ennen budjetin lisäämistä)</h6>
 
         <div class="kulut flex-space">
           <div>
@@ -103,12 +104,18 @@
           <div>
             <p>Auto 🚗</p>
             <span id="auto"></span>
+            <span id="auto-edit-input"></span>
+            <span id="auto-edit-input-value"></span>
+            <span id="auto-edit-input-button"></span>
             <br />
             <span id="auto-edit"></span>
           </div>
           <div>
             <p>Kauppa 🥩</p>
             <span id="kauppa"></span>
+            <span id="kauppa-edit-input"></span>
+            <span id="kauppa-edit-input-value"></span>
+            <span id="kauppa-edit-input-button"></span>
             <br />
             <span id="kauppa-edit"></span>
           </div>
@@ -116,18 +123,29 @@
           <div>
             <p>Netti 💻</p>
             <span id="netti"></span>
+            <span id="netti-edit-input"></span>
+            <span id="netti-edit-input-value"></span>
+            <span id="netti-edit-input-button"></span>
             <br />
             <span id="netti-edit"></span>
           </div>
           <div>
             <p>Muut 😮</p>
             <span id="muut"></span>
+            <span id="muut-edit-input"></span>
+            <span id="muut-edit-input-value"></span>
+            <span id="muut-edit-input-button"></span>
+
             <br />
             <span id="muut-edit"></span>
           </div>
           <div>
             <p>Viihde 📺</p>
             <span id="viihde"></span>
+            <span id="viihde-edit-input"></span>
+            <span id="viihde-edit-input-value"></span>
+            <span id="viihde-edit-input-button"></span>
+
             <br />
             <span id="viihde-edit"></span>
           </div>
@@ -153,7 +171,7 @@
 
       <div class="footer">
         <button class="submit" id="clearmonth" onclick="clearMonth()">
-          Tyhjennä
+          Uusi kuukausi
         </button>
         <h3>@juho.codes</h3>
 
