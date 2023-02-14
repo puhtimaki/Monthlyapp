@@ -105,36 +105,32 @@
           <div>
             <p>Auto 🚗</p>
             <span id="auto"></span>
-          <br>
-          <span id="auto-edit"></span>
+            <br />
+            <span id="auto-edit"></span>
 
             <span id="auto-edit-input"></span>
             <span id="auto-edit-input-value"></span>
             <span id="auto-edit-input-button"></span>
-            
           </div>
           <div>
             <p>Kauppa 🥩</p>
             <span id="kauppa"></span>
-            <br>
+            <br />
             <span id="kauppa-edit"></span>
             <span id="kauppa-edit-input"></span>
             <span id="kauppa-edit-input-value"></span>
             <span id="kauppa-edit-input-button"></span>
             <br />
-            
           </div>
 
           <div>
             <p>Netti 💻</p>
             <span id="netti"></span>
-            <br>
+            <br />
             <span id="netti-edit"></span>
             <span id="netti-edit-input"></span>
             <span id="netti-edit-input-value"></span>
             <span id="netti-edit-input-button"></span>
-       
-          
           </div>
           <div>
             <p>Muut 😮</p>
@@ -144,19 +140,15 @@
             <span id="muut-edit-input"></span>
             <span id="muut-edit-input-value"></span>
             <span id="muut-edit-input-button"></span>
-
-          
           </div>
           <div>
             <p>Viihde 📺</p>
             <span id="viihde"></span>
-            <br>
+            <br />
             <span id="viihde-edit"></span>
             <span id="viihde-edit-input"></span>
             <span id="viihde-edit-input-value"></span>
             <span id="viihde-edit-input-button"></span>
-
-          
           </div>
         </div>
         <h3>Kuluva kuukausi:</h3>
@@ -176,33 +168,30 @@
             <span id="saastotili-amount"></span>
           </div>
         </div>
-      
       </div>
 
-<div id ="savebuttons">
-  <button class="submit-newmonth" id="clearmonth" onclick="clearMonth()">
-    Aloita uusi kuukausi
-  </button>
- 
-  <button class="submit-saveall" id="clearmonth" onclick="SaveAll()">
-    Tallenna muutokset
-  </button>
+      <div id="savebuttons">
+        <button class="submit-newmonth" id="clearmonth" onclick="clearMonth()">
+          Aloita uusi kuukausi
+        </button>
 
-</div>
-
+        <button class="submit-saveall" id="savelocal">
+          Tallenna muutokset
+        </button>
+      </div>
 
       <div class="footer">
-       
-       
-
-        <h3><a href="https://instagram.com/juho.codes" target="_blank">@juho.codes</a></h3>
-
+        <h3>
+          <a href="https://instagram.com/juho.codes" target="_blank">
+            @juho.codes
+          </a>
+        </h3>
 
         <script type="text/javascript">
           function clearMonth() {
             localStorage.clear()
             location.reload()
-            alert("Kuukausi nollattu")
+            alert('Kuukausi nollattu!')
           }
         </script>
       </div>

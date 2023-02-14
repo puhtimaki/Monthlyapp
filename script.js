@@ -1,5 +1,62 @@
 'use strict'
 
+//load local storage at start
+window.onload = function () {
+  let budget = localStorage.getItem('budget')
+  let budgetElem = document.querySelector('#amount')
+  budgetElem.innerHTML = budget + ' €'
+
+  let lainaStatic = localStorage.getItem('lainaStatic')
+  let autoStatic = localStorage.getItem('autoStatic')
+  let kauppaStatic = localStorage.getItem('kauppaStatic')
+  let muutStatic = localStorage.getItem('muutStatic')
+  let viihdeStatic = localStorage.getItem('viihdeStatic')
+  let nettiStatic = localStorage.getItem('nettiStatic')
+  let saastoTiliStatic = localStorage.getItem('saastoTiliStatic')
+  let lainaElem = document.querySelector('#laina')
+  lainaElem.innerHTML = lainaStatic + ' €'
+  let autoElem = document.querySelector('#auto')
+  autoElem.innerHTML = autoStatic + ' €'
+  let kauppaElem = document.querySelector('#kauppa')
+  kauppaElem.innerHTML = kauppaStatic + ' €'
+  let muutElem = document.querySelector('#muut')
+  muutElem.innerHTML = muutStatic + ' €'
+  let viihdeElem = document.querySelector('#viihde')
+  viihdeElem.innerHTML = viihdeStatic + ' €'
+  let nettiElem = document.querySelector('#netti')
+  nettiElem.innerHTML = nettiStatic + ' €'
+  let saastoTiliElem = document.querySelector('#saastotili-amount')
+  saastoTiliElem.innerHTML = saastoTiliStatic + ' €'
+}
+
+// if local storage empty set static values
+if (localStorage.getItem('lainaStatic') === null) {
+  localStorage.setItem('lainaStatic', 519)
+}
+if (localStorage.getItem('autoStatic') === null) {
+  localStorage.setItem('autoStatic', 590)
+}
+if (localStorage.getItem('kauppaStatic') === null) {
+  localStorage.setItem('kauppaStatic', 350)
+}
+if (localStorage.getItem('muutStatic') === null) {
+  localStorage.setItem('muutStatic', 64)
+}
+if (localStorage.getItem('viihdeStatic') === null) {
+  localStorage.setItem('viihdeStatic', 26)
+}
+if (localStorage.getItem('nettiStatic') === null) {
+  localStorage.setItem('nettiStatic', 27)
+}
+if (localStorage.getItem('saastoTiliStatic') === null) {
+  localStorage.setItem('saastoTiliStatic', 60)
+}
+if (localStorage.getItem('budget') === null) {
+  localStorage.setItem('budget', 0)
+}
+
+// LOCAL STORAGE LOAD ABOVE
+
 //static expenses
 let lainaStatic = 519
 let autoStatic = 590
@@ -186,7 +243,6 @@ nettiEdit.addEventListener('click', () => {
 //onclick event button
 
 let AddbbudgetButton = document.querySelector('#total-amount-button')
-let budget = localStorage.getItem('budget')
 AddbbudgetButton.addEventListener('click', addBudget)
 // eenter input
 let budgetInput = document.querySelector('#total-amount')
@@ -604,4 +660,20 @@ function addExpenses() {
     budgetLeftDividedRoundedElem.innerHTML = budgetLeftDividedRounded + ' €'
   }
   divideBudget()
+
+  /*   // add button to save all to local storage
+  let saveButton = document.querySelector('#savelocal')
+  saveButton.addEventListener('click', SaveAll)
+  alert('Tallennettu!')
+
+  //save to local storage
+  function SaveAll() {
+    localStorage.setItem('budget', budget)
+    localStorage.setItem('laina', laina)
+    localStorage.setItem('ruoka', ruokaStatic)
+    localStorage.setItem('asunnonvuokra', asunnonvuokraStatic)
+    localStorage.setItem('muut', muutStatic)
+    localStorage.setItem('netti', nettiStatic)
+    localStorage.setItem('viihde', viihdeStatic)
+  } */
 }
