@@ -305,6 +305,7 @@ function addBudget() {
 let saveButton = document.querySelector('#savelocal')
 saveButton.addEventListener('click', SaveAll)
 function SaveAll() {
+  alert('Muutokset tallennettu!')
   localStorage.setItem('budget', budget)
   /*  localStorage.setItem('laina', lainaStatic)
   localStorage.setItem('ruoka', ruokaStatic)
