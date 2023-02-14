@@ -244,6 +244,7 @@ nettiEdit.addEventListener('click', () => {
 
 let AddbbudgetButton = document.querySelector('#total-amount-button')
 AddbbudgetButton.addEventListener('click', addBudget)
+
 // eenter input
 let budgetInput = document.querySelector('#total-amount')
 budgetInput.addEventListener('keyup', (e) => {
@@ -661,19 +662,30 @@ function addExpenses() {
   }
   divideBudget()
 
-  /*   // add button to save all to local storage
+  // add button to save all to local storage
   let saveButton = document.querySelector('#savelocal')
   saveButton.addEventListener('click', SaveAll)
-  alert('Tallennettu!')
 
   //save to local storage
   function SaveAll() {
     localStorage.setItem('budget', budget)
-    localStorage.setItem('laina', laina)
+    localStorage.setItem('laina', lainaStatic)
     localStorage.setItem('ruoka', ruokaStatic)
-    localStorage.setItem('asunnonvuokra', asunnonvuokraStatic)
+    localStorage.setItem('saastotili ', saastotiliStatic)
     localStorage.setItem('muut', muutStatic)
     localStorage.setItem('netti', nettiStatic)
     localStorage.setItem('viihde', viihdeStatic)
-  } */
+    localStorage.setItem('budgetLeft', budgetLeft)
+    localStorage.setItem('budgetLeftDividedRounded', budgetLeftDividedRounded)
+    localStorage.setItem('budgetLeftMinusLaina', budgetLeftMinusLaina)
+    localStorage.setItem('budgetLeftMinusRuoka', budgetLeftMinusRuoka)
+    localStorage.setItem('budgetLeftMinusMuut', budgetLeftMinusMuut)
+    localStorage.setItem('budgetLeftMinusNetti', budgetLeftMinusNetti)
+    localStorage.setItem('budgetLeftMinusViihde', budgetLeftMinusViihde)
+    localStorage.setItem('list', list)
+    localStorage.setItem('li', li)
+    localStorage.setItem('trash', trash)
+    localStorage.setItem('budgetLeftDivided', budgetLeftDivided)
+    localStorage.setItem('budgetLeftDividedRounded', budgetLeftDividedRounded)
+  }
 }
