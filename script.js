@@ -19,7 +19,7 @@ lainaEdit.innerHTML = '<i class="fas fa-edit"></i>'
 lainaEdit.addEventListener('click', () => {
   let lainaEditInput = document.querySelector('#laina-edit-input')
   lainaEditInput.innerHTML =
-    '<input type="number" id="laina-edit-input-value" value=""><button id="laina-edit-input-button">Lisää</button>'
+    '<input type="number" pattern="[0-9]*" id="laina-edit-input-value" value=""><button id="laina-edit-input-button">Lisää</button>'
   let lainaEditInputButton = document.querySelector('#laina-edit-input-button')
   lainaEditInputButton.addEventListener('click', () => {
     let lainaEditInputValue = document.querySelector('#laina-edit-input-value')
@@ -51,7 +51,7 @@ autoEdit.innerHTML = '<i class="fas fa-edit"></i>'
 autoEdit.addEventListener('click', () => {
   let autoEditInput = document.querySelector('#auto-edit-input')
   autoEditInput.innerHTML =
-    '<input type="number" id="auto-edit-input-value" value=""><button id="auto-edit-input-button">Lisää</button>'
+    '<input type="number" pattern="[0-9]*" id="auto-edit-input-value" value=""><button id="auto-edit-input-button">Lisää</button>'
   let autoEditInputButton = document.querySelector('#auto-edit-input-button')
   autoEditInputButton.addEventListener('click', () => {
     let autoEditInputValue = document.querySelector('#auto-edit-input-value')
@@ -78,7 +78,7 @@ kauppaEdit.innerHTML = '<i class="fas fa-edit"></i>'
 kauppaEdit.addEventListener('click', () => {
   let kauppaEditInput = document.querySelector('#kauppa-edit-input')
   kauppaEditInput.innerHTML =
-    '<input type="number" id="kauppa-edit-input-value" value=""><button id="kauppa-edit-input-button">Lisää</button>'
+    '<input type="number" pattern="[0-9]*" id="kauppa-edit-input-value" value=""><button id="kauppa-edit-input-button">Lisää</button>'
   let kauppaEditInputButton = document.querySelector(
     '#kauppa-edit-input-button',
   )
@@ -108,7 +108,7 @@ muutEdit.innerHTML = '<i class="fas fa-edit"></i>'
 muutEdit.addEventListener('click', () => {
   let muutEditInput = document.querySelector('#muut-edit-input')
   muutEditInput.innerHTML =
-    '<input type="number" id="muut-edit-input-value" value=""><button id="muut-edit-input-button">Lisää</button>'
+    '<input type="number" pattern="[0-9]*" id="muut-edit-input-value" value=""><button id="muut-edit-input-button">Lisää</button>'
   let muutEditInputButton = document.querySelector('#muut-edit-input-button')
   muutEditInputButton.addEventListener('click', () => {
     let muutEditInputValue = document.querySelector('#muut-edit-input-value')
@@ -135,7 +135,7 @@ viihdeEdit.innerHTML = '<i class="fas fa-edit"></i>'
 viihdeEdit.addEventListener('click', () => {
   let viihdeEditInput = document.querySelector('#viihde-edit-input')
   viihdeEditInput.innerHTML =
-    '<input type="number" id="viihde-edit-input-value" value=""><button id="viihde-edit-input-button">Lisää</button>'
+    '<input type="number" pattern="[0-9]*" id="viihde-edit-input-value" value=""><button id="viihde-edit-input-button">Lisää</button>'
   let viihdeEditInputButton = document.querySelector(
     '#viihde-edit-input-button',
   )
@@ -165,7 +165,7 @@ nettiEdit.innerHTML = '<i class="fas fa-edit"></i>'
 nettiEdit.addEventListener('click', () => {
   let nettiEditInput = document.querySelector('#netti-edit-input')
   nettiEditInput.innerHTML =
-    '<input type="number" id="netti-edit-input-value" value=""><button id="netti-edit-input-button">Lisää</button>'
+    '<input type="number" pattern="[0-9]*" id="netti-edit-input-value" value=""><button id="netti-edit-input-button">Lisää</button>'
   let nettiEditInputButton = document.querySelector('#netti-edit-input-button')
   nettiEditInputButton.addEventListener('click', () => {
     let nettiEditInputValue = document.querySelector('#netti-edit-input-value')
