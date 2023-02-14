@@ -1,4 +1,5 @@
 'use strict'
+// add button to save all to local storage
 
 //load local storage at start
 window.onload = function () {
@@ -299,6 +300,29 @@ function addBudget() {
   let splitToFourWeeks = budgetLeft / 4
   let splitToFourWeeksElem = document.querySelector('#balance-amount')
   splitToFourWeeksElem.innerHTML = splitToFourWeeks + ' €'
+}
+
+let saveButton = document.querySelector('#savelocal')
+saveButton.addEventListener('click', SaveAll)
+function SaveAll() {
+  localStorage.setItem('budget', budget)
+  /*  localStorage.setItem('laina', lainaStatic)
+  localStorage.setItem('ruoka', ruokaStatic)
+  localStorage.setItem('muut', muutStatic)
+  localStorage.setItem('netti', nettiStatic)
+  localStorage.setItem('viihde', viihdeStatic)
+  localStorage.setItem('budgetLeft', budgetLeft)
+  localStorage.setItem('budgetLeftDividedRounded', budgetLeftDividedRounded)
+  localStorage.setItem('budgetLeftMinusLaina', budgetLeftMinusLaina)
+  localStorage.setItem('budgetLeftMinusRuoka', budgetLeftMinusRuoka)
+  localStorage.setItem('budgetLeftMinusMuut', budgetLeftMinusMuut)
+  localStorage.setItem('budgetLeftMinusNetti', budgetLeftMinusNetti)
+  localStorage.setItem('budgetLeftMinusViihde', budgetLeftMinusViihde)
+  localStorage.setItem('list', list)
+  localStorage.setItem('li', li)
+  localStorage.setItem('trash', trash)
+  localStorage.setItem('budgetLeftDivided', budgetLeftDivided)
+  localStorage.setItem('budgetLeftDividedRounded', budgetLeftDividedRounded) */
 }
 
 function addSavings() {
@@ -661,31 +685,4 @@ function addExpenses() {
     budgetLeftDividedRoundedElem.innerHTML = budgetLeftDividedRounded + ' €'
   }
   divideBudget()
-
-  // add button to save all to local storage
-  let saveButton = document.querySelector('#savelocal')
-  saveButton.addEventListener('click', SaveAll)
-
-  //save to local storage
-  function SaveAll() {
-    localStorage.setItem('budget', budget)
-    localStorage.setItem('laina', lainaStatic)
-    localStorage.setItem('ruoka', ruokaStatic)
-    localStorage.setItem('saastotili ', saastotiliStatic)
-    localStorage.setItem('muut', muutStatic)
-    localStorage.setItem('netti', nettiStatic)
-    localStorage.setItem('viihde', viihdeStatic)
-    localStorage.setItem('budgetLeft', budgetLeft)
-    localStorage.setItem('budgetLeftDividedRounded', budgetLeftDividedRounded)
-    localStorage.setItem('budgetLeftMinusLaina', budgetLeftMinusLaina)
-    localStorage.setItem('budgetLeftMinusRuoka', budgetLeftMinusRuoka)
-    localStorage.setItem('budgetLeftMinusMuut', budgetLeftMinusMuut)
-    localStorage.setItem('budgetLeftMinusNetti', budgetLeftMinusNetti)
-    localStorage.setItem('budgetLeftMinusViihde', budgetLeftMinusViihde)
-    localStorage.setItem('list', list)
-    localStorage.setItem('li', li)
-    localStorage.setItem('trash', trash)
-    localStorage.setItem('budgetLeftDivided', budgetLeftDivided)
-    localStorage.setItem('budgetLeftDividedRounded', budgetLeftDividedRounded)
-  }
 }
