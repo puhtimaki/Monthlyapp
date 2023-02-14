@@ -307,6 +307,8 @@ saveButton.addEventListener('click', SaveAll)
 function SaveAll() {
   alert('Muutokset tallennettu!')
   localStorage.setItem('budget', budget)
+  localStorage.setItem('saastoTiliStatic', savings)
+
   /*  localStorage.setItem('laina', lainaStatic)
   localStorage.setItem('ruoka', ruokaStatic)
   localStorage.setItem('muut', muutStatic)
@@ -330,6 +332,8 @@ function addSavings() {
   //add savings amount to static
   let savings = document.querySelector('#total-saastotili').value
   let savingsInt = parseInt(savings)
+  //local storage
+
   let saastoTiliStaticInt = parseInt(saastoTiliStatic)
   let saastoTiliStaticNew = saastoTiliStaticInt + savingsInt
   saastoTiliStatic = saastoTiliStaticNew
