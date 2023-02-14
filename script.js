@@ -334,6 +334,10 @@ function addExpenses() {
       lainaStatic = lainaStaticNew
       let lainaElem = document.querySelector('#laina')
       lainaElem.innerHTML = lainaStatic + ' €'
+      // split to 4 weeks
+      let splitToFourWeeks = budgetLeftMinusLaina / 4
+      let splitToFourWeeksElem = document.querySelector('#balance-amount')
+      splitToFourWeeksElem.innerHTML = splitToFourWeeks + ' €'
     })
   } else if (selectValue === 'Auto/Bensa') {
     // get value from input and add to static expenses and update html element with new value and clear input field and minus the amount from budget
@@ -381,6 +385,10 @@ function addExpenses() {
       autoStatic = autoStaticNew
       let autoElem = document.querySelector('#auto')
       autoElem.innerHTML = autoStatic + ' €'
+      // split to 4 weeks
+      let splitToFourWeeks = budgetLeftMinusAuto / 4
+      let splitToFourWeeksElem = document.querySelector('#balance-amount')
+      splitToFourWeeksElem.innerHTML = splitToFourWeeks + ' €'
     })
   } else if (selectValue === 'Kauppa') {
     // get value from input and add to static expenses and update html element with new value and clear input field and minus the amount from budget
@@ -427,6 +435,10 @@ function addExpenses() {
       kauppaStatic = kauppaStaticNew
       let kauppaElem = document.querySelector('#kauppa')
       kauppaElem.innerHTML = kauppaStatic + ' €'
+      // split to 4 weeks
+      let splitToFourWeeks = budgetLeftMinusKauppa / 4
+      let splitToFourWeeksElem = document.querySelector('#balance-amount')
+      splitToFourWeeksElem.innerHTML = splitToFourWeeks + ' €'
     })
   } else if (selectValue === 'Muu') {
     // get value from input and add to static expenses and update html element with new value and clear input field and minus the amount from budget
@@ -473,6 +485,10 @@ function addExpenses() {
       muutStatic = muutStaticNew
       let muutElem = document.querySelector('#muut')
       muutElem.innerHTML = muutStatic + ' €'
+      // split to 4 weeks
+      let splitToFourWeeks = budgetLeftMinusMuut / 4
+      let splitToFourWeeksElem = document.querySelector('#balance-amount')
+      splitToFourWeeksElem.innerHTML = splitToFourWeeks + ' €'
     })
   } else if (selectValue === 'Netti') {
     // get value from input and add to static expenses and update html element with new value and clear input field and minus the amount from budget
@@ -519,6 +535,10 @@ function addExpenses() {
       nettiStatic = nettiStaticNew
       let nettiElem = document.querySelector('#netti')
       nettiElem.innerHTML = nettiStatic + ' €'
+      // split to 4 weeks
+      let splitToFourWeeks = budgetLeftMinusNetti / 4
+      let splitToFourWeeksElem = document.querySelector('#balance-amount')
+      splitToFourWeeksElem.innerHTML = splitToFourWeeks + ' €'
     })
   } else if (selectValue === 'Viihde') {
     // get value from input and add to static expenses and update html element with new value and clear input field and minus the amount from budget
@@ -565,6 +585,10 @@ function addExpenses() {
       viihdeStatic = viihdeStaticNew
       let viihdeElem = document.querySelector('#viihde')
       viihdeElem.innerHTML = viihdeStatic + ' €'
+      // split to 4 weeks
+      let splitToFourWeeks = budgetLeftMinusViihde / 4
+      let splitToFourWeeksElem = document.querySelector('#balance-amount')
+      splitToFourWeeksElem.innerHTML = splitToFourWeeks + ' €'
     })
   } else {
     alert('Täytä kentät!')
