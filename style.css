@@ -27,9 +27,6 @@ body {
   align-items: center;
 }
 
-
-
-
 .flex-space {
   display: flex;
   justify-content: space-between;
@@ -104,9 +101,12 @@ li {
   list-style-type: none;
 }
 
-
-
-#auto-edit-input-button, #kauppa-edit-input-button, #netti-edit-input-button, #muut-edit-input-button, #viihde-edit-input-button, #laina-edit-input-button {
+#auto-edit-input-button,
+#kauppa-edit-input-button,
+#netti-edit-input-button,
+#muut-edit-input-button,
+#viihde-edit-input-button,
+#laina-edit-input-button {
   background-color: #000;
   color: #fff;
   border: none;
@@ -114,7 +114,6 @@ li {
   min-height: 30px;
   min-width: 60px;
   cursor: pointer;
-
 }
 
 .fa-trash-alt {
@@ -162,21 +161,20 @@ li {
   cursor: pointer;
 }
 
-.submit-newmonth{
+.submit-newmonth {
   background-color: darkred;
   color: #fff;
   border: none;
   border-radius: 10px;
   padding: 8px;
-  float: right;
+  float: left;
   margin-bottom: 5px;
   min-height: 5px;
   min-width: 80px;
   cursor: pointer;
-
 }
 
-.submit-saveall{
+.submit-saveall {
   background-color: darkgreen;
   color: #fff;
   border: none;
@@ -187,7 +185,6 @@ li {
   min-height: 5px;
   min-width: 80px;
   cursor: pointer;
-
 }
 
 .submit-saveall:hover {
@@ -219,18 +216,16 @@ li {
   margin-bottom: 10px;
 }
 
-a{
-  text-decoration:none;
-  color:black;
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .footer {
   padding: 6.8em 1.2em;
   text-align: left;
   font-size: 10px;
-
 }
-
 
 .sublist-content {
   width: 100%;
