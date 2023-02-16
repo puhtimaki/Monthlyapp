@@ -271,6 +271,7 @@ savingsInput.addEventListener('keyup', (e) => {
 //add budget amount
 function addBudget() {
   let budget = document.querySelector('#total-amount').value
+
   let budgetTotal = document.querySelector('#amount')
   budgetTotal.innerHTML = budget + ' €'
   document.querySelector('#total-amount').value = ''
@@ -302,14 +303,14 @@ function addBudget() {
   splitToFourWeeksElem.innerHTML = splitToFourWeeks + ' €'
 }
 
-let saveButton = document.querySelector('#savelocal')
+/* let saveButton = document.querySelector('#savelocal')
 saveButton.addEventListener('click', SaveAll)
 function SaveAll() {
   alert('Muutokset tallennettu!')
   localStorage.setItem('budget', budget)
-  localStorage.setItem('saastoTiliStatic', savings)
+  localStorage.setItem('saastoTiliStatic', savings) */
 
-  /*  localStorage.setItem('laina', lainaStatic)
+/*  localStorage.setItem('laina', lainaStatic)
   localStorage.setItem('ruoka', ruokaStatic)
   localStorage.setItem('muut', muutStatic)
   localStorage.setItem('netti', nettiStatic)
@@ -326,7 +327,7 @@ function SaveAll() {
   localStorage.setItem('trash', trash)
   localStorage.setItem('budgetLeftDivided', budgetLeftDivided)
   localStorage.setItem('budgetLeftDividedRounded', budgetLeftDividedRounded) */
-}
+//}
 
 function addSavings() {
   //add savings amount to static
