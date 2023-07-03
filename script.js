@@ -32,7 +32,7 @@ window.onload = function () {
 
 // if local storage empty set static values
 if (localStorage.getItem('lainaStatic') === null) {
-  localStorage.setItem('lainaStatic', 519)
+  localStorage.setItem('lainaStatic', 540)
 }
 if (localStorage.getItem('autoStatic') === null) {
   localStorage.setItem('autoStatic', 590)
@@ -59,7 +59,7 @@ if (localStorage.getItem('budget') === null) {
 // LOCAL STORAGE LOAD ABOVE
 
 //static expenses
-let lainaStatic = 519
+let lainaStatic = 540
 let autoStatic = 590
 let kauppaStatic = 350
 let muutStatic = 128
