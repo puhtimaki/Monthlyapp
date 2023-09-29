@@ -47,7 +47,7 @@ if (localStorage.getItem('viihdeStatic') === null) {
   localStorage.setItem('viihdeStatic', 45)
 }
 if (localStorage.getItem('nettiStatic') === null) {
-  localStorage.setItem('nettiStatic', 27)
+  localStorage.setItem('nettiStatic', 15)
 }
 if (localStorage.getItem('saastoTiliStatic') === null) {
   localStorage.setItem('saastoTiliStatic', 60)
@@ -64,7 +64,7 @@ let autoStatic = 590
 let kauppaStatic = 350
 let muutStatic = 156
 let viihdeStatic = 45
-let nettiStatic = 27
+let nettiStatic = 15
 let saastoTiliStatic = 60
 
 const lainaElem = document.querySelector('#laina')
