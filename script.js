@@ -50,7 +50,7 @@ if (localStorage.getItem('nettiStatic') === null) {
   localStorage.setItem('nettiStatic', 15)
 }
 if (localStorage.getItem('saastoTiliStatic') === null) {
-  localStorage.setItem('saastoTiliStatic', 60)
+  localStorage.setItem('saastoTiliStatic', 110)
 }
 if (localStorage.getItem('budget') === null) {
   localStorage.setItem('budget', 0)
@@ -65,7 +65,7 @@ let kauppaStatic = 350
 let muutStatic = 156
 let viihdeStatic = 45
 let nettiStatic = 15
-let saastoTiliStatic = 60
+let saastoTiliStatic = 110
 
 const lainaElem = document.querySelector('#laina')
 lainaElem.innerHTML = lainaStatic + ' €'
