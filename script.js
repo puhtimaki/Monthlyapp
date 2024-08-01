@@ -41,10 +41,10 @@ if (localStorage.getItem('kauppaStatic') === null) {
   localStorage.setItem('kauppaStatic', 350)
 }
 if (localStorage.getItem('muutStatic') === null) {
-  localStorage.setItem('muutStatic', 156)
+  localStorage.setItem('muutStatic', 131)
 }
 if (localStorage.getItem('viihdeStatic') === null) {
-  localStorage.setItem('viihdeStatic', 50)
+  localStorage.setItem('viihdeStatic', 40)
 }
 if (localStorage.getItem('nettiStatic') === null) {
   localStorage.setItem('nettiStatic', 19)
@@ -62,8 +62,8 @@ if (localStorage.getItem('budget') === null) {
 let lainaStatic = 1000
 let autoStatic = 690
 let kauppaStatic = 350
-let muutStatic = 156
-let viihdeStatic = 50
+let muutStatic = 131
+let viihdeStatic = 40
 let nettiStatic = 19
 let saastoTiliStatic = 160
 
