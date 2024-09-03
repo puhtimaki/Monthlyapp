@@ -32,7 +32,7 @@ window.onload = function () {
 
 // if local storage empty set static values
 if (localStorage.getItem('lainaStatic') === null) {
-  localStorage.setItem('lainaStatic', 1000)
+  localStorage.setItem('lainaStatic', 970)
 }
 if (localStorage.getItem('autoStatic') === null) {
   localStorage.setItem('autoStatic', 690)
@@ -41,7 +41,7 @@ if (localStorage.getItem('kauppaStatic') === null) {
   localStorage.setItem('kauppaStatic', 350)
 }
 if (localStorage.getItem('muutStatic') === null) {
-  localStorage.setItem('muutStatic', 131)
+  localStorage.setItem('muutStatic', 46)
 }
 if (localStorage.getItem('viihdeStatic') === null) {
   localStorage.setItem('viihdeStatic', 40)
@@ -59,10 +59,10 @@ if (localStorage.getItem('budget') === null) {
 // LOCAL STORAGE LOAD ABOVE
 
 //static expenses
-let lainaStatic = 1000
+let lainaStatic = 970
 let autoStatic = 690
 let kauppaStatic = 350
-let muutStatic = 131
+let muutStatic = 46
 let viihdeStatic = 40
 let nettiStatic = 19
 let saastoTiliStatic = 160
