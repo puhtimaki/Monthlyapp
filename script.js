@@ -41,7 +41,7 @@ if (localStorage.getItem('kauppaStatic') === null) {
   localStorage.setItem('kauppaStatic', 350)
 }
 if (localStorage.getItem('muutStatic') === null) {
-  localStorage.setItem('muutStatic', 147)
+  localStorage.setItem('muutStatic', 130)
 }
 if (localStorage.getItem('viihdeStatic') === null) {
   localStorage.setItem('viihdeStatic', 40)
@@ -62,7 +62,7 @@ if (localStorage.getItem('budget') === null) {
 let lainaStatic = 940
 let autoStatic = 690
 let kauppaStatic = 350
-let muutStatic = 147
+let muutStatic = 130
 let viihdeStatic = 40
 let nettiStatic = 40
 let saastoTiliStatic = 260
