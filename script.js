@@ -32,7 +32,7 @@ window.onload = function () {
 
 // if local storage empty set static values
 if (localStorage.getItem('lainaStatic') === null) {
-  localStorage.setItem('lainaStatic', 910)
+  localStorage.setItem('lainaStatic', 930)
 }
 if (localStorage.getItem('autoStatic') === null) {
   localStorage.setItem('autoStatic', 650)
@@ -41,16 +41,16 @@ if (localStorage.getItem('kauppaStatic') === null) {
   localStorage.setItem('kauppaStatic', 400)
 }
 if (localStorage.getItem('muutStatic') === null) {
-  localStorage.setItem('muutStatic', 185)
+  localStorage.setItem('muutStatic', 515)
 }
 if (localStorage.getItem('viihdeStatic') === null) {
-  localStorage.setItem('viihdeStatic', 40)
+  localStorage.setItem('viihdeStatic', 64)
 }
 if (localStorage.getItem('nettiStatic') === null) {
-  localStorage.setItem('nettiStatic', 52)
+  localStorage.setItem('nettiStatic', 0)
 }
 if (localStorage.getItem('saastoTiliStatic') === null) {
-  localStorage.setItem('saastoTiliStatic', 360)
+  localStorage.setItem('saastoTiliStatic', 300)
 }
 if (localStorage.getItem('budget') === null) {
   localStorage.setItem('budget', 0)
@@ -59,13 +59,13 @@ if (localStorage.getItem('budget') === null) {
 // LOCAL STORAGE LOAD ABOVE
 
 //static expenses
-let lainaStatic = 910
+let lainaStatic = 930
 let autoStatic = 650
 let kauppaStatic = 400
-let muutStatic = 185
-let viihdeStatic = 40
-let nettiStatic = 52
-let saastoTiliStatic = 360
+let muutStatic = 515
+let viihdeStatic = 64
+let nettiStatic = 0
+let saastoTiliStatic = 300
 
 const lainaElem = document.querySelector('#laina')
 lainaElem.innerHTML = lainaStatic + ' €'
