@@ -38,7 +38,7 @@ if (localStorage.getItem('autoStatic') === null) {
   localStorage.setItem('autoStatic', 650)
 }
 if (localStorage.getItem('kauppaStatic') === null) {
-  localStorage.setItem('kauppaStatic', 400)
+  localStorage.setItem('kauppaStatic', 500)
 }
 if (localStorage.getItem('muutStatic') === null) {
   localStorage.setItem('muutStatic', 515)
@@ -50,7 +50,7 @@ if (localStorage.getItem('nettiStatic') === null) {
   localStorage.setItem('nettiStatic', 0)
 }
 if (localStorage.getItem('saastoTiliStatic') === null) {
-  localStorage.setItem('saastoTiliStatic', 300)
+  localStorage.setItem('saastoTiliStatic', 200)
 }
 if (localStorage.getItem('budget') === null) {
   localStorage.setItem('budget', 0)
@@ -61,11 +61,11 @@ if (localStorage.getItem('budget') === null) {
 //static expenses
 let lainaStatic = 930
 let autoStatic = 650
-let kauppaStatic = 400
+let kauppaStatic = 500
 let muutStatic = 515
 let viihdeStatic = 64
 let nettiStatic = 0
-let saastoTiliStatic = 300
+let saastoTiliStatic = 200
 
 const lainaElem = document.querySelector('#laina')
 lainaElem.innerHTML = lainaStatic + ' €'
